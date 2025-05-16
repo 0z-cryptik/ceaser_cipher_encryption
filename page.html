@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./page.css" type="text/css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <form id="form">
+            <textarea required name="" id="text" maxlength="1000" placeholder="Enter the text you want to encrypt"></textarea>
+
+            <input id="shift" type="number" required maxlength="1">
+
+            <input type="submit" id="submitBtn" value="encrypt">
+        </form>
+
+        <div id="encryptedText" class="hidden"></div>
+        
+    </center>
+
+    <script src="./script.js"></script>
+</body>
+</html>

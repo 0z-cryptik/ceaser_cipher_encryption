@@ -1,0 +1,30 @@
+body{
+    color: white;
+    background-color: black;
+}
+
+textarea{
+    width: 50rem;
+    height: 20rem;
+    background-color: transparent;
+    color: white;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input#submitBtn{
+    width: 4rem;
+    margin-top: 2rem;
+}
+
+input#shift{
+    width: 10rem;
+    margin-top: 2rem;
+}
+
+.hidden{
+    display: none;
+}
