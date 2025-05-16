@@ -9,13 +9,13 @@
 
 <body>
     <form id="form">
-        <label for="text">Enter Text:</label>
+        <label id="first" for="text">Enter Text:</label>
         <textarea required name="" id="text" maxlength="1000" placeholder="Enter the text you want to encrypt"></textarea>
 
-        <span>
+        <div id="key">
             <label for="shift">Key:</label>
             <input id="shift" type="number" required maxlength="1">
-        </span>
+        </div>
 
         <input type="submit" id="submitBtn" value="Encrypt">
     </form>
