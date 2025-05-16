@@ -2,6 +2,12 @@ body{
     color: white;
     background-color: black;
     padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    justify-items: center;
 }
 
 textarea{
@@ -16,6 +22,8 @@ textarea{
 form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 input#submitBtn{
