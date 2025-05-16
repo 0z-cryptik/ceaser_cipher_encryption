@@ -3,6 +3,7 @@ const form = document.getElementById("form");
 const shift_input = document.getElementById("shift");
 const response_display = document.getElementById("encryptedText");
 const response_wrapper = document.getElementById("encryptedTextWrapper");
+const copy_button = document.getElementById("copyBtn");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -12,6 +13,26 @@ form.addEventListener("submit", (e) => {
 shift_input.addEventListener("input", () => {
   shift_input.value = shift_input.value.replace(/[^0-9]/g, "");
   shift_input.value = shift_input.value.slice(0, 1);
+});
+
+copy_button.addEventListener("click", async (e) => {
+  const text_to_copy = response_display.innerText;
+
+  if (text_to_copy) {
+    try {
+      await navigator.clipboard.writeText(text_to_copy);
+      copy_button.innerHTML = `<img src="./icons/icons8-check-mark-24.png">`;
+
+      setTimeout(() => {
+        copy_button.innerHTML = `<img src="./icons/icons8-copy-24.png">`;
+      }, 1500);
+    } catch (e) {
+      copy_button.innerText = "error";
+      setTimeout(() => {
+        copy_button.innerText = `<img src="./icons/icons8-copy-24.png">`;
+      }, 1500);
+    }
+  }
 });
 
 function isUpperCase(char) {

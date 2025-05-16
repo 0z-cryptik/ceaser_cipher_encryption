@@ -47,14 +47,19 @@ input#shift{
 }
 
 #encryptedText{
-    padding: 2rem;
-    border: solid 1px white;
     text-align: left;
+    padding: 2rem;
+}
+
+#encryptedTextInnerWrapper{
+    position: relative;
+    border: solid 1px white;
 }
 
 #encryptedTextWrapper{
     margin-top: 4rem;
     width: 80%;
+    align-items: right;
 }
 
 p{
@@ -64,4 +69,14 @@ p{
 label{
     width: 50rem;
     text-align: left;
+}
+
+#copyBtn{
+    background-color: white;
+    position: absolute;
+    right: 0px;
+}
+
+#copyBtn:hover{
+    cursor: pointer;
 }
