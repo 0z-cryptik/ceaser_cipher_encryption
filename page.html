@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./page.css" type="text/css" rel="stylesheet">
-    <title>Document</title>
+    <title>Ceaser Cipher Encryption</title>
 </head>
 <body>
     <center>
         <form id="form">
+            <label for="text">Enter Text:</label>
             <textarea required name="" id="text" maxlength="1000" placeholder="Enter the text you want to encrypt"></textarea>
 
-            <input id="shift" type="number" required maxlength="1">
+            <span>
+                <label for="shift">Key:</label>
+                <input id="shift" type="number" required maxlength="1">
+            </span>
 
-            <input type="submit" id="submitBtn" value="encrypt">
+            <input type="submit" id="submitBtn" value="Encrypt">
         </form>
 
-        <div id="encryptedText" class="hidden"></div>
+        <section id="encryptedTextWrapper" class="hidden">
+            <p>Encrypted text:</p>
+            <div id="encryptedText"></div>
+        </section>
         
     </center>
 

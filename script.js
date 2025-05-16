@@ -2,6 +2,7 @@ const text = document.getElementById("text");
 const form = document.getElementById("form");
 const shift_input = document.getElementById("shift");
 const response_display = document.getElementById("encryptedText");
+const response_wrapper = document.getElementById("encryptedTextWrapper");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -47,5 +48,5 @@ function ceaser_cipher(text, shift) {
   }
 
   response_display.innerText = encrypted_text;
-  response_display.classList.remove("hidden");
+  response_wrapper.classList.remove("hidden");
 }

@@ -1,13 +1,16 @@
 body{
     color: white;
     background-color: black;
+    padding-top: 4rem;
 }
 
 textarea{
     width: 50rem;
     height: 20rem;
+    margin-top: 1rem;
     background-color: transparent;
     color: white;
+    font-size:small;
 }
 
 form{
@@ -16,8 +19,22 @@ form{
 }
 
 input#submitBtn{
-    width: 4rem;
+    width: 6rem;
+    padding-top: 4px ;
+    padding-bottom: 4px ;
     margin-top: 2rem;
+    font-size: small;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.1s ease;
+}
+
+input#submitBtn:hover{
+    cursor: pointer;
+}
+
+input#submitBtn:active{
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    transform: scale(0.98);
 }
 
 input#shift{
@@ -27,4 +44,24 @@ input#shift{
 
 .hidden{
     display: none;
+}
+
+#encryptedText{
+    padding: 2rem;
+    border: solid 1px white;
+    text-align: left;
+}
+
+#encryptedTextWrapper{
+    margin-top: 4rem;
+    width: 80%;
+}
+
+p{
+    text-align: left;
+}
+
+label{
+    width: 50rem;
+    text-align: left;
 }
