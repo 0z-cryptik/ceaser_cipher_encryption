@@ -89,6 +89,14 @@ label{
     cursor: pointer;
 }
 
+i{
+    font-size: smaller;
+}
+
+a{
+    margin-top: 3rem;
+}
+
 @media (max-width: 600px) {
     textarea {
       width: 100%;

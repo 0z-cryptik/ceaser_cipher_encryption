@@ -4,11 +4,21 @@ const shift_input = document.getElementById("shift");
 const response_display = document.getElementById("encryptedText");
 const response_wrapper = document.getElementById("encryptedTextWrapper");
 const copy_button = document.getElementById("copyBtn");
+const form_decrypt = document.getElementById("formDecrypt");
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  ceaser_cipher(text.value, shift_input.value);
-});
+if (form) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    ceaser_cipher(text.value, shift_input.value, false);
+  });
+}
+
+if (form_decrypt) {
+  form_decrypt.addEventListener("submit", (e) => {
+    e.preventDefault();
+    ceaser_cipher(text.value, shift_input.value, true);
+  });
+}
 
 shift_input.addEventListener("input", () => {
   shift_input.value = shift_input.value.replace(/[^0-9]/g, "");
@@ -51,17 +61,25 @@ function process(char, case_a_ascii_num, shift_num) {
   const shifted_letter = String.fromCharCode(shifted_position);
   return shifted_letter;
 }
+//26 - key
+function ceaser_cipher(text, shift, decryptMode) {
+  let key;
 
-function ceaser_cipher(text, shift) {
+  if (decryptMode) {
+    key = 26 - Number(shift);
+  } else {
+    key = Number(shift);
+  }
+
   let encrypted_text = "";
   for (i in text) {
     const char = text[i];
 
     if (isUpperCase(char)) {
-      const shifted_letter = process(char, 65, Number(shift));
+      const shifted_letter = process(char, 65, key);
       encrypted_text += shifted_letter;
     } else if (isLowercase(char)) {
-      const shifted_letter = process(char, 97, Number(shift));
+      const shifted_letter = process(char, 97, key);
       encrypted_text += shifted_letter;
     } else {
       encrypted_text += char;
